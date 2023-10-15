@@ -11,6 +11,6 @@ You can try this tool out yourself by downloading this project and going through
    3. This could probably work for other browsers than Chrome, but you would have to play with [`test_install_drivers.py`](./test_install_drivers.py) to get it working.
 3. Create a copy of your Chrome "User Data" file, and add it to this UberEatsSpending directory. The "User Data" folder will usually be found under `C:\Users\[YOUR USER]\AppData\Local\Google\Chrome\User Data`
 4. Figure out which Chrome profile you logged in to UberEats on in step 2. If you only have 1 profile, or used your main Chrome profile, it should just be "Default". You can find other profiles in the `User Data` directory.  
-5. Add the COPPIED directory, e.g. C:\Code\UberEatsSpending\User Data, and the profile used to the marked fields in [`get_spend.py`](./get_spend.py)
+5. Add the COPPIED directory, e.g. C:\Code\UberEatsSpending\User Data, and the profile used to the marked fields in [`test_install_drivers.py`](./test_install_drivers.py)
 
 Upon completing setup, run this tool with `python [PATH TO DIR]/get_spend.py`
