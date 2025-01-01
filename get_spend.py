@@ -1,4 +1,4 @@
-from test_install_drivers import get_chrome_driver
+from drivers import get_chrome_driver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -6,6 +6,7 @@ import time
 from datetime import datetime, timedelta
 from selenium.webdriver.common.keys import Keys
 from tqdm import tqdm
+import sys
 
 def get_receipt_info(driver, receipt_button):
     receipt_button.click()
@@ -29,8 +30,8 @@ def get_receipt_info(driver, receipt_button):
     return (cost, date_object)
     
 
-def do_navigation(days):
-    driver= get_chrome_driver()
+def do_navigation(days, user_data_path, profile_dir):
+    driver = get_chrome_driver(user_data_path, profile_dir)
     wait = WebDriverWait(driver, 10)
     driver.get("https://www.ubereats.com/orders")
     
@@ -78,12 +79,12 @@ def do_navigation(days):
         
     print(f'\nFinal Sum: ${total}')
     driver.quit()
+    
+if len(sys.argv) != 4 or not sys.argv[1].isdigit():
+    print("Usage: python script.py <days> <user_data_path> <profile_dir>")
 
-while True:    
-    days = input("Number of days orders to get total for: ")
-    if days.isdigit():
-        break
-    print("Only enter whole numbers!")
-    
-    
-do_navigation(int(days))
+days = int(sys.argv[1])
+user_data_path = sys.argv[2]
+profile_dir = sys.argv[3]
+
+do_navigation(days, user_data_path, profile_dir)

@@ -2,7 +2,7 @@
 This is a tool I made for calculating UberEats order spending. [See it in action!](https://www.youtube.com/watch?v=U3GDPXsux74)
 
 ## Try it yourself!
-You can try this tool out yourself by downloading this project and going through the following steps. It requries a bit of setup, but shouldn't be too difficult. 
+You can try this tool out yourself by downloading this project and going through the following steps. It requires a bit of setup, but shouldn't be too difficult. 
 
 1. Download [Selenium Webdriver for  Python](https://pypi.org/project/selenium/#files).
 2. Open Chrome and login to UberEats. 
