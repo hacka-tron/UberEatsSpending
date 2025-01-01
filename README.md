@@ -2,7 +2,7 @@
 This is a tool I made for calculating UberEats order spending. [See it in action!](https://www.youtube.com/watch?v=U3GDPXsux74)
 
 ## Try it yourself!
-You can try this tool out yourself by [downloading this project](/Downloads/) and going through the following steps. 
+[Download the application](/Downloads/UberEatsSpending.zip) and going through the following steps: 
 
 1. Open Chrome and login to UberEats. 
    1. This step is important!! Without it you won't be authenticated and your orders can't be tallied.
